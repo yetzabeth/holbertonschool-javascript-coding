@@ -19,5 +19,7 @@ fs.writeFile(filePath, contentToWrite, 'utf-8', (err) => {
     console.error(err);
     process.exit(1);
   }
-  console.log('The file has been written successfully.');
+
+  // Print the content of the file without additional messages
+  console.log(contentToWrite);
 });
