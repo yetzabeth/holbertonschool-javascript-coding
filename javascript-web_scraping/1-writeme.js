@@ -8,17 +8,16 @@ const contentToWrite = process.argv[3];
 
 // Check if both file path and content are provided
 if (!filePath || !contentToWrite) {
-  console.error('Usage: ./1-writeme.js <file-path> <content-to-write>');
+  console.error('Usage: ./1-writeme.js <file-path> <string-to-write>');
   process.exit(1);
 }
 
-// Write the string to the file in utf-8
+// Write the content to the file in utf-8
 fs.writeFile(filePath, contentToWrite, 'utf-8', (err) => {
   if (err) {
     // Print the error object if an error occurred during writing
     console.error(err);
     process.exit(1);
   }
-
-  console.log(`Content has been written to ${filePath}`);
+  console.log('The file has been written successfully.');
 });
